@@ -94,7 +94,7 @@ def winner
 end
 
 def turn_count # empty spaces are set to " ", not "" anymore 
-  return board.count {|piece| piece != " "}
+  return @b.count {|piece| piece != " "}
 end
 
 def current_player
