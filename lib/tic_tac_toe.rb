@@ -88,7 +88,7 @@ end
 # ACTUAL MOVE METHODS #######
   
   def current_player
-    @player_piece = turn_count.even? ? "X" : "O"
+    return turn_count.even? ? "X" : "O"
   end
 
   def turn_count
