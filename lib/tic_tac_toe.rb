@@ -93,7 +93,7 @@ def winner
   return @b[won?(board)[0]] if won?(board)
 end
 
-def turn_count # empty spaces are set to " ", not "" anymore 
+def turn_count
   return @b.count {|square| square != " "}
 end
 
