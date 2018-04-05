@@ -19,7 +19,7 @@ class TicTacToe
       self.turn
     end
     if self.won?
-      puts "Congratulations #{winner(board)}!"
+      puts "Congratulations #{winner}!"
     elsif draw?(board)
       puts "Cat's Game!"
     end
