@@ -15,8 +15,8 @@ class TicTacToe
   
   # MAIN FUNCTION METHODS #########
   def play
-    until over?
-      turn
+    until self.over?
+      self.turn
     end
     if won?
       puts "Congratulations #{winner(board)}!"
