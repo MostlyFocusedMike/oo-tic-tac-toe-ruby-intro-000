@@ -9,6 +9,10 @@ class TicTacToe
   
   # GENERAL METHODS ############
   
+  def display_board
+    puts [0,3,6].map {|i| " #{@b[i]} | #{@b[i+1]} | #{@b[i+2]} \n"}.join("#{'-'*11}\n")
+  end
+  
   def turn
     puts "Please enter 1-9:"
     self.gets_input
@@ -74,9 +78,7 @@ end
     end
   end
   
-  def display_board
-    puts [0,3,6].map {|i| " #{@b[i]} | #{@b[i+1]} | #{@b[i+2]} \n"}.join("#{'-'*11}\n")
-  end
+
   
 
 end
