@@ -93,7 +93,7 @@ def winner(board)
   return board[won?(board)[0]] if won?(board)
 end
 
-def turn_count(board) # empty spaces are set to " ", not "" anymore 
+def turn_count # empty spaces are set to " ", not "" anymore 
   return board.count {|piece| piece != " "}
 end
 
