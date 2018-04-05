@@ -19,7 +19,7 @@ class TicTacToe
       turn(board)
     end
   end
-  # MOVE METHODS #############################################
+  # SETUP MOVE METHODS #############################################
   def get_input
     @input = gets.strip
   end
@@ -62,7 +62,6 @@ end
 # NEW METHOD END ########################################
 
 # CHECK GAME STATUS ####################################
-
 def over?
   return draw? || won?
 end
@@ -82,16 +81,6 @@ end
 def full?
   return @b.none? {|square| square == " "}
 end
-
-
-
-
-
-
-
-
-
-
 # END CHECK GAME STATUS ####################################
 
 
