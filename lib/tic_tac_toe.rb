@@ -67,19 +67,23 @@ def over?
   return draw? || won?
 end
 
-def full?
-  return @b.none? {|square| square == " "}
-end
-
-def won?(b) # b short for board
+def won? # b short for board
   WIN_COMBINATIONS.find do |win|
-    b[win[0]] == b[win[1]] && b[win[1]] == b[win[2]] && b[win[0]] != " "
+    @b[win[0]] == @b[win[1]] && @b[win[1]] == @b[win[2]] && @b[win[0]] != " "
   end
 end
 
 def draw?
   return full? && !won?
 end
+
+def full?
+  return @b.none? {|square| square == " "}
+end
+
+
+
+
 
 
 
