@@ -62,8 +62,8 @@ end
 # NEW METHOD END ########################################
 
 # CHECK GAME STATUS ####################################
-def full?(board)
-  return board.none? {|xo| xo == " "}
+def full?
+  return @b.none? {|xo| xo == " "}
 end
 
 
