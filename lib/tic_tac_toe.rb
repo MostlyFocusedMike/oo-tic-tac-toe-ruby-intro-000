@@ -32,18 +32,9 @@ class TicTacToe
     !(@b[index].nil? || @b[index] == " ")
   end
 
-  
-
-
-
-
-
-
-
-
-def move(board, position, char)
-  board[position] = char
-end
+  def move(board, position, char)
+    board[position] = char
+  end
 # END MOVE METHODS #############################################
 
   
