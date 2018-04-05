@@ -70,7 +70,7 @@ end
     @input = gets.strip
   end
 
-  def input_to_index
+  def input_to_index(str)
     @index = @input.to_i - 1
   end
 
