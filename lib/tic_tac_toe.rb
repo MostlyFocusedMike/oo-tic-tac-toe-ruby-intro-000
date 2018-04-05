@@ -71,7 +71,7 @@ end
   end
 
   def input_to_index(str)
-    @index = @input.to_i - 1
+    @index = str.to_i - 1
   end
 
 
