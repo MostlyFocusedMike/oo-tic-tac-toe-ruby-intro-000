@@ -28,6 +28,8 @@ class TicTacToe
     @index = @input.to_i - 1
   end
 
+
+  # MOVE CHECK METHODS ########
   def valid_move?
     return !position_taken? && index.between?(0,8)
   end
