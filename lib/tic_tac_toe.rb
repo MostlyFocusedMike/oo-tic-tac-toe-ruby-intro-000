@@ -38,6 +38,19 @@ class TicTacToe
     end
   end
   
+  # GAME CHECK METHODS #########
+  def over?
+    return draw? || won?
+  end
+  
+  def won? # b short for board
+    WIN_COMBINATIONS.find do |win|
+      @b[win[0]] == @b[win[1]] &&
+      @b[win[1]] == @b[win[2]] && 
+      @b[win[0]] != " "
+    end
+  end
+  
   
   # SETUP MOVE METHODS #############################################
   def get_input
@@ -86,17 +99,7 @@ class TicTacToe
 # NEW METHOD END ########################################
 
 # CHECK GAME STATUS ####################################
-def over?
-  return draw? || won?
-end
 
-def won? # b short for board
-  WIN_COMBINATIONS.find do |win|
-    @b[win[0]] == @b[win[1]] &&
-    @b[win[1]] == @b[win[2]] && 
-    @b[win[0]] != " "
-  end
-end
 
 def draw?
   return full? && !won?
