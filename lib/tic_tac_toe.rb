@@ -98,8 +98,7 @@ end
   def move
     @b[@index] = @player_piece
   end
-
-
+end
 
   
   
