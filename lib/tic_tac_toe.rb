@@ -19,10 +19,27 @@ class TicTacToe
       turn(board)
     end
   end
-  
+  # MOVE METHODS #############################################
+
+
+
+
+
+
+
+
+def move(board, position, char)
+  board[position] = char
+end
+# END MOVE METHODS #############################################
   def get_input
     @input = gets.strip
   end
+  
+  def position_taken?(board, index)
+    !(board[index].nil? || board[index] == " ")
+  end
+
   
   def valid_move?
     return !position_taken?(board, index) && index.between?(0,8)
@@ -94,19 +111,4 @@ end
 
 
 
-# MOVE METHODS #############################################
 
-
-
-def position_taken?(board, index)
-  !(board[index].nil? || board[index] == " ")
-end
-
-
-
-
-
-def move(board, position, char)
-  board[position] = char
-end
-# END MOVE METHODS #############################################
