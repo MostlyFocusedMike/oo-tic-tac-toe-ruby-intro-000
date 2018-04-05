@@ -8,8 +8,12 @@ class TicTacToe
   end
   
   def display_board
-  puts [0,3,6].map {|i| " #{@b[i]} | #{@b[i+1]} | #{@b[i+2]} \n"}.join("#{'-'*11}\n")
-end
+    puts [0,3,6].map {|i| " #{@b[i]} | #{@b[i+1]} | #{@b[i+2]} \n"}.join("#{'-'*11}\n")
+  end
+  
+  def input_to_index(input)
+    return input.to_i - 1
+  end
 end
 
   
@@ -93,9 +97,7 @@ end
 
 
 # MOVE METHODS #############################################
-def input_to_index(input)
-  return input.to_i - 1
-end
+
 
 
 def position_taken?(board, index)
