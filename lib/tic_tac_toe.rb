@@ -39,6 +39,8 @@ class TicTacToe
   end
   # END OF MAIN FUNCTION METHODS #########
   
+  
+  
   # ENDGAME METHODS #########
   def over?
     return draw? || won?
@@ -76,7 +78,7 @@ class TicTacToe
   def input_to_index(str)
     @index = str.to_i - 1
   end
-  
+  # END OF SETUP MOVE METHODS #############################################
   
 
 
