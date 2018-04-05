@@ -32,7 +32,7 @@ class TicTacToe
     input_to_index(input)
     if self.valid_move?
       self.current_player 
-      self.move 
+      self.move(@index,@player_piec) 
       self.display_board
     else 
       self.turn
