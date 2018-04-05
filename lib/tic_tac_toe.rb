@@ -57,11 +57,11 @@ end
   end
   
   def full?
-    return @b.none? {|square| square == " "}
+    return @board.none? {|square| square == " "}
   end
   
   def winner #return the piece of the winner 
-    return @b[won?[0]] if won? # won returns the winning combo 
+    return @board[won?[0]] if won? # won returns the winning combo 
   end
   # END OF ENDGAME METHODS ########################################
   
