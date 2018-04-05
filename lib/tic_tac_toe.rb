@@ -20,6 +20,10 @@ class TicTacToe
     end
   end
   
+  def get_input
+    @input = gets.strip
+  end
+  
   def play(board)
     until over?(board)
       turn(board)
