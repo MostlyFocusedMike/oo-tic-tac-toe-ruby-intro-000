@@ -31,7 +31,7 @@ class TicTacToe
     self.input_to_index
     if self.valid_move?
       self.current_player 
-      move(board,index,char) 
+      self.move 
       display_board
     else 
       turn(board)
@@ -59,9 +59,10 @@ class TicTacToe
     return @b.none? {|square| square == " "}
   end
   
-  def winner
-    return @b[won?[0]] if won?
+  def winner #return the piece of the winner 
+    return @b[won?[0]] if won? # won returns the winning combo 
   end
+  # END OF ENDGAME METHODS ########################################
   
   # SETUP MOVE METHODS #############################################
   def get_input
