@@ -33,7 +33,7 @@ class TicTacToe
   end
 
   def move(board, position, char)
-    board[@index] = char
+    board[@index] = @player
   end
 # END MOVE METHODS #############################################
 
