@@ -63,7 +63,7 @@ end
 
 # CHECK GAME STATUS ####################################
 def full?
-  return @b.none? {|xo| xo == " "}
+  return @b.none? {|square| square == " "}
 end
 
 
