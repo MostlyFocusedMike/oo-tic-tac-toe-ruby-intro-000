@@ -62,26 +62,30 @@ end
 # NEW METHOD END ########################################
 
 # CHECK GAME STATUS ####################################
+
+def over?
+  return draw? || won?
+end
+
 def full?
   return @b.none? {|square| square == " "}
 end
-
-
-def draw?
-  return full? && !won?
-end
-
-
-def over?(board)
-  return draw?(board) || won?(board)
-end
-
 
 def won?(b) # b short for board
   WIN_COMBINATIONS.find do |win|
     b[win[0]] == b[win[1]] && b[win[1]] == b[win[2]] && b[win[0]] != " "
   end
 end
+
+def draw?
+  return full? && !won?
+end
+
+
+
+
+
+
 # END CHECK GAME STATUS ####################################
 
 
