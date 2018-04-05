@@ -45,11 +45,19 @@ class TicTacToe
     return turn_count.even? ? "X" : "O"
   end
 
+def turn_count
+  return @b.count {|square| square != " "}
+end
+
   def move
     @b[@index] = @player_piece
   end
 
 
+   def winner
+  return @b[won?(board)[0]] if won?(board)
+end
+  
   
   def play(board)
     until over?(board)
@@ -97,13 +105,7 @@ end
 
 
 # PLAYER METHODS ###########################################
-def winner
-  return @b[won?(board)[0]] if won?(board)
-end
 
-def turn_count
-  return @b.count {|square| square != " "}
-end
 
 
 # END PLAYER METHODS ########################################
