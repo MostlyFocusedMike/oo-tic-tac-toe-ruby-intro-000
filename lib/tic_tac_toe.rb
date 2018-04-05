@@ -28,7 +28,7 @@ end
   
   def turn
     puts "Please enter 1-9:"
-    self.gets_input
+    input = gets.strip
     self.input_to_index(@input)
     if self.valid_move?
       self.current_player 
