@@ -24,6 +24,10 @@ class TicTacToe
     @input = gets.strip
   end
   
+  def valid_move?
+    return !position_taken?(board, index) && index.between?(0,8)
+  end
+  
   def play(board)
     until over?(board)
       turn(board)
@@ -99,9 +103,7 @@ def position_taken?(board, index)
 end
 
 
-def valid_move?(board, index)
-  return !position_taken?(board, index) && index.between?(0,8)
-end
+
 
 
 def move(board, position, char)
