@@ -62,7 +62,10 @@ class TicTacToe
   def winner #return the piece of the winner 
     return @board[won?[0]] if won? # won returns the winning combo 
   end
-  # END OF ENDGAME METHODS ########################################
+  # END OF ENDGAME METHODS #########
+  
+  
+  
   
   # SETUP MOVE METHODS #############################################
   def get_input
@@ -72,6 +75,8 @@ class TicTacToe
   def input_to_index(str)
     @index = str.to_i - 1
   end
+  
+  
 
 
   # MOVE CHECK METHODS ########
