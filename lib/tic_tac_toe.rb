@@ -15,7 +15,7 @@ class TicTacToe
   
   # MAIN FUNCTION METHODS #########
   def play
-    until over?(board)
+    until over?
       turn(board)
     end
     if won?(board)
