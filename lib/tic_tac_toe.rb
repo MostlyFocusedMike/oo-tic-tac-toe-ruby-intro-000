@@ -32,7 +32,7 @@ class TicTacToe
     if self.valid_move?
       self.current_player 
       self.move 
-      display_board
+      self.display_board
     else 
       turn(board)
     end
