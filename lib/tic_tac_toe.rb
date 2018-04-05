@@ -80,7 +80,7 @@ end
     return !position_taken? && index.between?(0,8)
   end
 
-  def position_taken?
+  def position_taken?(index)
     !(@board[index].nil? || @board[index] == " ")
   end
 
