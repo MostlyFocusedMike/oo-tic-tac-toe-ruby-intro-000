@@ -60,7 +60,7 @@ class TicTacToe
   end
   
   def winner
-    return @b[won?[0]] if won?(board)
+    return @b[won?[0]] if won?
   end
   
   # SETUP MOVE METHODS #############################################
