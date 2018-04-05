@@ -77,7 +77,7 @@ end
 
   # MOVE CHECK METHODS ########
   def valid_move?(index)
-    return !position_taken? && index.between?(0,8)
+    return !position_taken?(index) && index.between?(0,8)
   end
 
   def position_taken?(index)
