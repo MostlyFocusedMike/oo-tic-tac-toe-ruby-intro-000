@@ -92,7 +92,7 @@ end
   end
 
   def turn_count
-    return @b.count {|square| square != " "}
+    return @board.count {|square| square != " "}
   end
 
   def move(index,player_piece)
