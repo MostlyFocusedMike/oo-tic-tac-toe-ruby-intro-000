@@ -68,7 +68,7 @@ end
 
 
 def draw?
-  return full? && !won?(board)
+  return full? && !won?
 end
 
 
