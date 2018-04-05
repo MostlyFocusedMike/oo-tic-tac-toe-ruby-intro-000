@@ -95,7 +95,7 @@ class TicTacToe
     return @b.count {|square| square != " "}
   end
 
-  def move(po)
+  def move(index,player_piece)
     @board[index] = player_piece
   end
 end
