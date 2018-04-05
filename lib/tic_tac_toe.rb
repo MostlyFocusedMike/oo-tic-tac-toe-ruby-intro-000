@@ -89,8 +89,8 @@ end
 
 
 # PLAYER METHODS ###########################################
-def winner(board)
-  return board[won?(board)[0]] if won?(board)
+def winner
+  return @b[won?(board)[0]] if won?(board)
 end
 
 def turn_count # empty spaces are set to " ", not "" anymore 
@@ -98,7 +98,7 @@ def turn_count # empty spaces are set to " ", not "" anymore
 end
 
 def current_player
-  return turn_count(board).even? ? "X" : "O"
+  return turn_count.even? ? "X" : "O"
 end
 # END PLAYER METHODS ########################################
 
