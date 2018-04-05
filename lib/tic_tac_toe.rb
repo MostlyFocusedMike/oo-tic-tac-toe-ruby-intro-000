@@ -45,9 +45,9 @@ class TicTacToe
     return turn_count.even? ? "X" : "O"
   end
 
-def turn_count
-  return @b.count {|square| square != " "}
-end
+  def turn_count
+    return @b.count {|square| square != " "}
+  end
 
   def move
     @b[@index] = @player_piece
