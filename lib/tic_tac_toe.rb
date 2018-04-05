@@ -42,7 +42,7 @@ class TicTacToe
 # ACTUAL MOVE METHODS #######
   
   def current_player
-    return turn_count.even? ? "X" : "O"
+    @player_piece = turn_count.even? ? "X" : "O"
   end
 
   def turn_count
