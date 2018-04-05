@@ -13,7 +13,18 @@ class TicTacToe
     puts [0,3,6].map {|i| " #{@b[i]} | #{@b[i+1]} | #{@b[i+2]} \n"}.join("#{'-'*11}\n")
   end
   
-  # MAIN FUNCTION METHODS
+  # MAIN FUNCTION METHODS #########
+  def play
+    until over?(board)
+      turn(board)
+    end
+    if won?(board)
+      puts "Congratulations #{winner(board)}!"
+    elsif draw?(board)
+      puts "Cat's Game!"
+    end
+  end
+  
   def turn
     puts "Please enter 1-9:"
     self.gets_input
@@ -68,16 +79,7 @@ class TicTacToe
 end
   
   
-  def play(board)
-    until over?(board)
-      turn(board)
-    end
-    if won?(board)
-      puts "Congratulations #{winner(board)}!"
-    elsif draw?(board)
-      puts "Cat's Game!"
-    end
-  end
+  
   
 
   
