@@ -38,10 +38,12 @@ class TicTacToe
     !(@b[index].nil? || @b[index] == " ")
   end
 
+
+# ACTUAL MOVE METHODS #######
   def move
     @b[@index] = @piece
   end
-# END MOVE METHODS #############################################
+
 
   
   def play(board)
