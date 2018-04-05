@@ -7,6 +7,8 @@ class TicTacToe
     @b = board || Array.new(9, " ")
   end
   
+  # GENERAL METHODS ############
+  
   def turn
     puts "Please enter 1-9:"
     self.gets_input
@@ -19,6 +21,8 @@ class TicTacToe
       turn(board)
     end
   end
+  
+  
   # SETUP MOVE METHODS #############################################
   def get_input
     @input = gets.strip
