@@ -51,6 +51,13 @@ class TicTacToe
     end
   end
   
+  def draw?
+    return full? && !won?
+  end
+  
+  def full?
+    return @b.none? {|square| square == " "}
+  end
   
   # SETUP MOVE METHODS #############################################
   def get_input
@@ -101,13 +108,7 @@ class TicTacToe
 # CHECK GAME STATUS ####################################
 
 
-def draw?
-  return full? && !won?
-end
 
-def full?
-  return @b.none? {|square| square == " "}
-end
 # END CHECK GAME STATUS ####################################
 
 
