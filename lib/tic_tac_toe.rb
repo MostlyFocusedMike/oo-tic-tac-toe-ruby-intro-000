@@ -38,7 +38,7 @@ class TicTacToe
     end
   end
   
-  # ENDGAME CHECK METHODS #########
+  # ENDGAME METHODS #########
   def over?
     return draw? || won?
   end
