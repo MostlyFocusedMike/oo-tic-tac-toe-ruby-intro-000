@@ -7,6 +7,30 @@ class TicTacToe
     @b = board || Array.new(9, " ")
   end
   
+  def turn(board)
+    puts "Please enter 1-9:"
+    @input = gets.strip
+    index = input_to_index
+    if valid_move?(board, index)
+      char = current_player(board) 
+      move(board,index,char) 
+      display_board(board)
+    else 
+      turn(board)
+    end
+  end
+  
+  def play(board)
+    until over?(board)
+      turn(board)
+    end
+    if won?(board)
+      puts "Congratulations #{winner(board)}!"
+    elsif draw?(board)
+      puts "Cat's Game!"
+    end
+  end
+  
   def display_board
     puts [0,3,6].map {|i| " #{@b[i]} | #{@b[i+1]} | #{@b[i+2]} \n"}.join("#{'-'*11}\n")
   end
@@ -21,30 +45,10 @@ end
 
 
 
-def turn(board)
-  puts "Please enter 1-9:"
-  input = gets.strip
-  index = input_to_index(input)
-  if valid_move?(board, index)
-    char = current_player(board) 
-    move(board,index,char) 
-    display_board(board)
-  else 
-    turn(board)
-  end
-end
 
 
-def play(board)
-  until over?(board)
-    turn(board)
-  end
-  if won?(board)
-    puts "Congratulations #{winner(board)}!"
-  elsif draw?(board)
-    puts "Cat's Game!"
-  end
-end
+
+
 # END MAIN UTILITY METHODS #################################
 
 
