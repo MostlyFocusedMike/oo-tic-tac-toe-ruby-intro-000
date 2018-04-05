@@ -39,21 +39,7 @@ class TicTacToe
     @index = @input.to_i - 1
   end
 end
-
-  
-# MAIN UTILITY METHODS ##########################################
-
-
-
-
-
-
-
-# END MAIN UTILITY METHODS #################################
-
-
-
-
+# NEW METHOD END ########################################
 
 # CHECK GAME STATUS ####################################
 def full?(board)
