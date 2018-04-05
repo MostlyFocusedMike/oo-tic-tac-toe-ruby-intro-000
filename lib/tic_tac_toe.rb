@@ -40,6 +40,11 @@ class TicTacToe
 
 
 # ACTUAL MOVE METHODS #######
+  
+  def current_player
+    return turn_count.even? ? "X" : "O"
+  end
+
   def move
     @b[@index] = @piece
   end
@@ -100,9 +105,7 @@ def turn_count
   return @b.count {|square| square != " "}
 end
 
-def current_player
-  return turn_count.even? ? "X" : "O"
-end
+
 # END PLAYER METHODS ########################################
 
 
