@@ -24,6 +24,10 @@ class TicTacToe
     @input = gets.strip
   end
 
+  def input_to_index
+    @index = @input.to_i - 1
+  end
+
   def valid_move?
     return !position_taken? && index.between?(0,8)
   end
@@ -53,9 +57,7 @@ class TicTacToe
     puts [0,3,6].map {|i| " #{@b[i]} | #{@b[i+1]} | #{@b[i+2]} \n"}.join("#{'-'*11}\n")
   end
   
-  def input_to_index
-    @index = @input.to_i - 1
-  end
+
 end
 # NEW METHOD END ########################################
 
