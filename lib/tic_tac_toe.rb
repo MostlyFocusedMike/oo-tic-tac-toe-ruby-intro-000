@@ -68,7 +68,7 @@ def over?
 end
 
 def won? # b short for board
-  WIN_COMBINATIONS.find do |win|
+  WIN_COMBOS.find do |win|
     @b[win[0]] == @b[win[1]] &&
     @b[win[1]] == @b[win[2]] && 
     @b[win[0]] != " "
