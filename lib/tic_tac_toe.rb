@@ -11,7 +11,7 @@ class TicTacToe
     puts "Please enter 1-9:"
     self.gets_input
     self.input_to_index
-    if valid_move?
+    if self.valid_move?
       char = current_player(board) 
       move(board,index,char) 
       display_board
