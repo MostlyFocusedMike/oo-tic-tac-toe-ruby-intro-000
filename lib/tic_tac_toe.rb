@@ -46,7 +46,7 @@ end
   
   def won? # b short for board
     WIN_COMBINATIONS.find do |win|
-      @board[win[0]] == @board[win[1]] &&
+      @b[win[0]] == @b[win[1]] &&
       @b[win[1]] == @b[win[2]] && 
       @b[win[0]] != " "
     end
