@@ -59,6 +59,10 @@ class TicTacToe
     return @b.none? {|square| square == " "}
   end
   
+  def winner
+    return @b[won?(board)[0]] if won?(board)
+  end
+  
   # SETUP MOVE METHODS #############################################
   def get_input
     @input = gets.strip
@@ -94,9 +98,7 @@ class TicTacToe
   end
 
 
-  def winner
-    return @b[won?(board)[0]] if won?(board)
-  end
+
   
   
   
