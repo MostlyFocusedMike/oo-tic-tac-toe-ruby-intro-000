@@ -7,7 +7,7 @@ class TicTacToe
     @b = board || Array.new(9, " ")
   end
   
-  def turn(board)
+  def turn
     puts "Please enter 1-9:"
     @input = gets.strip
     self.input_to_index
