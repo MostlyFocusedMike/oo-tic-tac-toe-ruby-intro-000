@@ -12,7 +12,7 @@ class TicTacToe
     self.gets_input
     self.input_to_index
     if self.valid_move?
-      char = current_player(board) 
+      self.current_player(board) 
       move(board,index,char) 
       display_board
     else 
