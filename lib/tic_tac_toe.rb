@@ -96,7 +96,7 @@ class TicTacToe
   end
 
   def move(po)
-    @board[@index] = @player_piece
+    @board[index] = player_piece
   end
 end
 
