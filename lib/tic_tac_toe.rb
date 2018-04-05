@@ -66,7 +66,7 @@ end
   # END OF ENDGAME METHODS ########################################
   
   # SETUP MOVE METHODS #############################################
-  def get_input(string)
+  def get_input
     @input = gets.strip
   end
 
