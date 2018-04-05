@@ -74,17 +74,15 @@ class TicTacToe
   end
 
 
-   def winner
-  return @b[won?(board)[0]] if won?(board)
-end
+  def winner
+    return @b[won?(board)[0]] if won?(board)
+  end
   
   
   
   
 
-  
 
-end
 # NEW METHOD END ########################################
 
 # CHECK GAME STATUS ####################################
@@ -108,19 +106,6 @@ def full?
   return @b.none? {|square| square == " "}
 end
 # END CHECK GAME STATUS ####################################
-
-
-
-
-
-# PLAYER METHODS ###########################################
-
-
-
-# END PLAYER METHODS ########################################
-
-
-
 
 
 
