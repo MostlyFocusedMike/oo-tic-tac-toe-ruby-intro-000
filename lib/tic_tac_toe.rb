@@ -28,10 +28,10 @@ class TicTacToe
   def turn
     puts "Please enter 1-9:"
     input = gets.strip
-    index = input_to_index(input)
-    if valid_move?(index)
+    index = input_to_index(input)  # WHY ARE WE PASSING AROUND LOCAL VARIABLES INSTEAD OF USING @
+    if valid_move?(index) # DUMB
       char = current_player
-      move(index,char) 
+      move(index,char) #DUMBER 
       display_board
     else 
       turn
